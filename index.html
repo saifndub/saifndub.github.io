@@ -22,19 +22,19 @@
     
 	<link rel="canonical" href="https://saifndub.github.io/">		<!-- improving SEO by avoiding potential duplicate content penalties -->
 	<link rel="shortcut icon" type="image/x-icon" id="favicon" href="images/gallery/saif.jpg">	<!-- For an older, Microsoft-specific standard-->
-    <link rel="icon" type="image/x-icon" id="favicon" href="images/gallery/saif.jpg">			<!-- For more standardized and widely accepted way-->
+	<link rel="icon" type="image/x-icon" id="favicon" href="images/gallery/saif.jpg">			<!-- For more standardized and widely accepted way-->
 	<script>		///  This code is for icon/shortcut icon selection in Light or Dark mode of the visitor's browser using id="favicon"
-        const favicon = document.getElementById('favicon');
-        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
-        function updateFavicon() {
-            if (prefersDarkMode.matches) {
-                favicon.href = 'images/gallery/aboutMe.jpg';     // For Dark mode
-            } else {
-                favicon.href = 'images/gallery/saif.jpg';    // For Light mode
-            }
-        }
-        prefersDarkMode.addListener(updateFavicon);
-        updateFavicon(); 
+		const favicon = document.getElementById('favicon');
+		const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+		function updateFavicon() {
+		    if (prefersDarkMode.matches) {
+		        favicon.href = 'images/gallery/aboutMe.jpg';     // For Dark mode
+		    } else {
+		        favicon.href = 'images/gallery/saif.jpg';    // For Light mode
+		    }
+		}
+		prefersDarkMode.addListener(updateFavicon);
+		updateFavicon(); 
 	</script>		<!-- End of this code -->
 
 	<!-- Google tag (gtag.js) - Google Analytics -->
