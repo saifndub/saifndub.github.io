@@ -37,13 +37,16 @@
 			</p>
 			<div class="filters">
                 <p style="text-align: left;">
-                    <input type="checkbox" id="level" name="level" value="n5">
-                    <label for="n5">N5</label>
+                    <input type="radio" id="all" name="filter" value="*" checked>
+                    <label for="all">All</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <input type="checkbox" id="level" name="level" value="n4">
-                    <label for="n4">N4</label>
+                    <input type="radio" id="n5" name="filter" value=".n5">
+                    <label for="n5">N5</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <input type="checkbox" id="level" name="level" value="n3">
+                    <input type="radio" id="n4" name="filter" value=".n4">
+                    <label for="n4">N4</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <input type="radio" id="n3" name="filter" value=".n3">
                     <label for="n3">N3</label>
                 </p>
                   
@@ -63,8 +66,7 @@
 			<!--recap-->
 			<div class="filters-content">
 				<div class="row grid">
-
-					<div class="single-portfolio col-sm-3 all robotics">
+					<div class="single-portfolio col-sm-3 all robotics n5">
 						<div class="portfolio-item">
 							<div class="portfolio-img overflow-hidden">
 								<img class="img-rectangular" src="images/projects/Car_Robot.jpg" alt="" title="Multifunctional Robot Car">
@@ -102,7 +104,7 @@
 						</div>
 					</div>
 
-					<div class="single-portfolio col-sm-3 all web">
+					<div class="single-portfolio col-sm-3 all web n5">
 						<div class="portfolio-item">
 							<div class="portfolio-img overflow-hidden">
 								<img class="img-rectangular" src="images/projects/UniversityManagementSystem.jpg" alt="" title="University Management System">
@@ -377,6 +379,16 @@
 								submitButton.value = "Send Message";
 							})
 					});
+
+                    // This code for level selection of a language
+                    document.querySelectorAll('.filters input[type="radio"]').forEach(radio => {
+                        radio.addEventListener('change', function() {
+                            const filter = document.querySelector('.filters input[type="radio"]:checked').value;
+                            document.querySelectorAll('.single-portfolio').forEach(portfolioItem => {
+                                portfolioItem.style.display = filter === '*' || portfolioItem.classList.contains(filter.slice(1)) ? 'block' : 'none';
+                            });
+                        });
+                    });
 				</script>
 
 				<div class="col-md-5 pl-md-5">
