@@ -20,6 +20,25 @@
 		h4:hover {
         color: red; /* Change the color to red when hovered */
     	}
+		.portfolio-btn {
+			opacity: 1;
+			z-index: 1;
+			transition: none;
+		}
+		.portfolio-img1 {
+			position: relative; /* Ensure the parent has a relative position */
+		}
+		.portfolio-img1::after {
+			position: absolute;
+			content: "";
+			width: 100%; /* Make it cover the full width */
+			height: 28%; /* Set the height to 28% of the parent */
+			bottom: 0; /* Anchor to the bottom of the parent */
+			left: 0; /* Align to the left of the parent */
+			background: var(--dark); /* Red background color */
+			transition: none; /* Remove any transition effects */
+		}
+
 	</style>
 </head>
 
@@ -28,7 +47,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="section-heading text-center col-md-12">
-					<h2>Saif's <strong>Project Showcase</strong></h2>
+					<h2><strong>Japanese Language Learning</strong></h2>
 				</div>
 			</div>
 			<p>
@@ -54,13 +73,13 @@
 				<div class="row grid">
 					<div class="single-portfolio col-sm-3 all vocab">
 						<div class="portfolio-item">
-							<div class="portfolio-img overflow-hidden">
+							<div class="portfolio-img1 overflow-hidden">
 								<img class="img-rectangular" src="images/projects/Car_Robot.jpg" alt="" title="Multifunctional Robot Car">
 								<div class="portfolio-btn">
 									<a class="btn btn-outline-light mx-2" target="_blank" href="https://github.com/saifndub/Multifunctional_Robot_Car">
-										Code&nbsp;<i class="iconify" data-icon="mdi:link" style="font-size: 17px;"></i></a>
+										Download&nbsp;<i class="iconify" data-icon="mdi:download" style="font-size: 17px;"></i></a>
 									<a class="btn btn-outline-light mx-2" target="_blank" href="https://youtu.be/kdsVhpjAuRs?si=JoclG5RZFR0PYJCx">
-										Live&nbsp;<i class="iconify" data-icon="mdi:eye" style="font-size: 16px;"></i></a>
+										View&nbsp;<i class="iconify" data-icon="mdi:eye" style="font-size: 16px;"></i></a>
 								</div>
 							</div>
 						</div>
@@ -72,7 +91,7 @@
 
 					<div class="single-portfolio col-sm-3 all vocab">
 						<div class="portfolio-item">
-							<div class="portfolio-img overflow-hidden">
+							<div class="portfolio-img1 overflow-hidden">
 								<img class="img-rectangular" src="images/projects/Industrial_Motor_Control.jpg" alt="" title="Industrial Motor Controlling and Monitoring System">
 								<div class="portfolio-btn">
 									<a class="btn btn-outline-light mx-2" target="_blank" href="https://github.com/saifndub/Industrial_Motor_Controlling_and_Monitoring_System">
