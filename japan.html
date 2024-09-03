@@ -43,6 +43,53 @@
 			color: inherit; /* Ensure the link inherits the color from the parent button 
 			text-decoration: none; /* Remove underline from links 
 		}*/
+		/* The Modal (background) */
+		.modal {
+			display: none; /* Hidden by default */
+			position: fixed;
+			z-index: 1000; /* Sit on top */
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.9); /* Black with transparency */
+		}
+
+		/* Modal Content */
+		.modal-content {
+			position: relative;
+			margin: auto;
+			padding: 20px;
+			width: 90%;
+			max-width: 900px;
+			height: 90%;
+			background-color: #fff;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		/* The Close Button */
+		.close {
+			position: absolute;
+			top: 10px;
+			right: 25px;
+			color: #aaa;
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		#pdfViewer {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
 	</style>
 </head>
 
@@ -80,11 +127,18 @@
 							<div class="portfolio-img1 overflow-hidden">
 								<img class="img-rectangular" src="images/projects/Car_Robot.jpg" alt="" title="Multifunctional Robot Car">
 								<div class="portfolio-btn">
-									<a class="btn btn-outline-light mx-2" target="_blank" download="JapaneseResumeSaif.pdf"
-										href="pdf/Japanese_CV_Saif.pdf"> Download&nbsp;
-										<i class="iconify" data-icon="mdi:download" style="font-size: 17px;"></i></a>
-									<a class="btn btn-outline-light mx-2" target="_self" href="pdf/Japanese_CV_Saif.pdf">
+									<a class="btn btn-outline-light mx-2" download="JapaneseResumeSaif.pdf"
+									   href="pdf/Japanese_CV_Saif.pdf"> Download&nbsp;
+									   <i class="iconify" data-icon="mdi:download" style="font-size: 17px;"></i></a>
+									<a class="btn btn-outline-light mx-2" href="#" onclick="openPDF('pdf/Japanese_CV_Saif.pdf')">
 										View&nbsp;<i class="iconify" data-icon="mdi:eye" style="font-size: 16px;"></i></a>
+								</div>
+								
+								<div id="pdfModal" class="modal">
+									<div class="modal-content">
+										<span class="close" onclick="closePDF()">&times;</span>
+										<iframe id="pdfViewer" src="" frameborder="0"></iframe>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -387,6 +441,30 @@
 								submitButton.value = "Send Message";
 							})
 					});
+				</script>
+				<script>
+					function openPDF(pdfURL) {
+						var modal = document.getElementById("pdfModal");
+						var iframe = document.getElementById("pdfViewer");
+						iframe.src = pdfURL;
+						modal.style.display = "block";
+					}
+
+					function closePDF() {
+						var modal = document.getElementById("pdfModal");
+						var iframe = document.getElementById("pdfViewer");
+						iframe.src = "";
+						modal.style.display = "none";
+					}
+
+					// Optional: Close the modal when clicking outside the modal content
+					window.onclick = function(event) {
+						var modal = document.getElementById("pdfModal");
+						if (event.target == modal) {
+							closePDF();
+						}
+					}
+
 				</script>
 
 				<div class="col-md-5 pl-md-5">
