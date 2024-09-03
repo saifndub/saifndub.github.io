@@ -63,7 +63,7 @@
 			width: 100%;
 			max-width: 1000px;
 			height: 100%;
-			background-color: #fff;
+			background-color: #c7afaf;
 			border-radius: 8px;
 			overflow: hidden;
 		}
@@ -71,7 +71,7 @@
 		/* The Close Button */
 		.close {
 			position: absolute;
-			top: 0px;
+			top: -5px;
 			right: 3px;
 			color: #ff0303;
 			background-color: #fff;
@@ -123,23 +123,21 @@
 			<!--recap-->
 			<div class="filters-content">
 				<div class="row grid">
+					<div id="pdfModal" class="modal">
+						<div class="modal-content">
+							<span class="close" onclick="closePDF()">&times;</span>
+							<iframe id="pdfViewer" src="" frameborder="0"></iframe>
+						</div>
+					</div>
 					<div class="single-portfolio col-sm-3 all vocab">
 						<div class="portfolio-item">
 							<div class="portfolio-img1 overflow-hidden">
 								<img class="img-rectangular" src="images/projects/Car_Robot.jpg" alt="" title="Multifunctional Robot Car">
 								<div class="portfolio-btn">
-									<a class="btn btn-outline-light mx-2" download="JapaneseResumeSaif.pdf"
-									   href="pdf/Japanese_CV_Saif.pdf"> Load&nbsp;
-									   <i class="iconify" data-icon="mdi:download" style="font-size: 17px;"></i></a>
+									<a class="btn btn-outline-light mx-2" download="JapaneseResumeSaif.pdf" href="pdf/Japanese_CV_Saif.pdf"> 
+									    Load<i class="iconify" data-icon="mdi:download" style="font-size: 17px;"></i></a>
 									<a class="btn btn-outline-light mx-2" href="#" onclick="openPDF('pdf/Japanese_CV_Saif.pdf')">
 										View&nbsp;<i class="iconify" data-icon="mdi:eye" style="font-size: 16px;"></i></a>
-								</div>
-								
-								<div id="pdfModal" class="modal">
-									<div class="modal-content">
-										<span class="close" onclick="closePDF()">&times;</span>
-										<iframe id="pdfViewer" src="" frameborder="0"></iframe>
-									</div>
 								</div>
 							</div>
 						</div>
