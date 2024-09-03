@@ -75,8 +75,10 @@
 			right: 3px;
 			color: #ff0303;
 			background-color: #fff;
-			font-size: 35px;
+			font-size: 50px;
 			font-weight: bold;
+			/*border: none;  Remove any border 
+    		opacity: 1; /* Ensure no transparency */
 		}
 
 		.close:hover,
@@ -125,7 +127,7 @@
 				<div class="row grid">
 					<div id="pdfModal" class="modal">
 						<div class="modal-content">
-							<span class="close" onclick="closePDF()">&times;</span>
+							<span class="close" onclick="closePDF()">&nbsp;&times;&nbsp;</span> <!-- &times; -->
 							<iframe id="pdfViewer" src="" frameborder="0"></iframe>
 						</div>
 					</div>
