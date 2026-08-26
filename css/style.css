@@ -628,7 +628,7 @@ a:active {
   color: #fe6845;
 }
 .data_science h4{
-  color: #f2d494;
+  color: #f8a809;
 }
 .robotics h4{
   color: lime;
@@ -637,7 +637,7 @@ a:active {
   color: #d3de32;
 }
 .iot h4{
-  color: chartreuse;
+  color: rgba(0, 255, 166, 0.656);
 }
 .nlp h4{
   color: blueviolet;
