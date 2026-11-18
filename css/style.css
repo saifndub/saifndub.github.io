@@ -630,19 +630,19 @@ a:active {
 .data_science h4{
   color: #f8a809;
 }
+.website h4 {
+  color: #d3de32;
+}
 .robotics h4{
   color: lime;
-}
-.web h4 {
-  color: #d3de32;
 }
 .iot h4{
   color: rgba(0, 255, 166, 0.656);
 }
-.nlp h4{
+.vlsi h4{
   color: blueviolet;
 }
-.llm h4 {
+.languageProcessing h4 {
   color: #138fc0;
 }
 
